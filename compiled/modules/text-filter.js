@@ -29,11 +29,10 @@ module.exports = function (h, inputClass) {
       'class': inputClass,
       attrs: { name: _this._getColumnName(column),
         type: 'text',
-        placeholder: _this.display('filterBy', { column: _this.getHeading(column) })
+        placeholder: _this.display('filterBy', { column: _this.getHeading(column) }),
+        value: _this.query[column]
       },
-      domProps: {
-        'value': _this.query[column]
-      }
+      domProps: {}
     });
   };
 };
